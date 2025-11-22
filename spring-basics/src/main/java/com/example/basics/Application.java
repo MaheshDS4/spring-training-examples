@@ -23,7 +23,8 @@ public class Application {
     CommandLineRunner run(HelloPrinter helloPrinter,
                           SetterDemo setterDemo,
                           ConstructorDemo constructorDemo,
-                          AutowireDemo autowireDemo) {
+                          AutowireDemo autowireDemo,
+                            Car car) {
         return args -> {
             System.out.println("--- Hello World (Spring Boot) ---");
             helloPrinter.print();
@@ -36,6 +37,10 @@ public class Application {
 
             System.out.println("\n--- Autowiring demo ---");
             autowireDemo.show();
+
+            System.out.println("\n--- Autowiring car demo ---");
+            car.drive();
+
         };
     }
 }

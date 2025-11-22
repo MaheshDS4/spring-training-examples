@@ -16,12 +16,7 @@ public class Application {
       return args -> {
           System.out.println("--- Calling success method (triggers before, after, around, afterReturning) ---");
           demoService.success("Alice");
-          System.out.println("\n--- Calling error method (triggers afterThrowing) ---");
-          try {
-              demoService.error();
-          } catch (RuntimeException e) {
-              System.out.println("Caught exception in main: " + e.getMessage());
-          }
+          demoService.timeLogs("Time Logs");
       };
   }
 }
