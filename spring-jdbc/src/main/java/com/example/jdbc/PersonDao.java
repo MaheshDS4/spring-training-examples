@@ -34,7 +34,8 @@ public class PersonDao {
     }
 
     public List<Person> listAll() {
-        return jdbc.query("SELECT id,name,email FROM person", new PersonRowMapper());
+        return jdbc.query("SELECT id,name,email FROM person", 
+        new PersonRowMapper());
     }
 
     // ResultSetExtractor example
